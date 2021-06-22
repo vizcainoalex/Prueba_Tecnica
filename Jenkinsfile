@@ -13,7 +13,7 @@ pipeline{
         
         stage('Compile ..') {
            steps {
-               sh "echo $PWD"
+               echo "echo "$PWD
                   sh "mvn clean package"
                 }
         }
