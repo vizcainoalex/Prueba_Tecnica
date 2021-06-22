@@ -16,7 +16,7 @@ pipeline{
                echo 'Compile..'
                sh 'find . -name Prueba_Tecnica'
                sh '''cd '/var/jenkins_home/workspace/Hello_World/RestApiDemo'
-               mvn clean install'''
+               mvn clean package'''
                //sh "mvn clean package"
                 }
         }
