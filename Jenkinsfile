@@ -14,8 +14,9 @@ pipeline{
         stage('Compile ..') {
            steps {
                echo 'Compile..'
-               sh "find . -name Prueba_Tecnica"
-                  sh "mvn clean package"
+               sh 'find . -name Prueba_Tecnica'
+                sh 'cd /var/jenkins_home/workspace/Hello World/RestApiDemo'
+               sh "mvn clean package"
                 }
         }
         stage('Build'){
