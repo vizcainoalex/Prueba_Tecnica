@@ -8,7 +8,7 @@ pipeline{
             }
         }
         
-      stage('Compile ..') {
+        stage('Compile ..') {
           
             def mvn_version = 'maven_3_8_1'
                 withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
