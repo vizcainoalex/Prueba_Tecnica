@@ -14,7 +14,7 @@ pipeline{
         stage('Compile ..') {
            steps {
                echo 'Compile..'
-               find . -name Prueba_Tecnica
+               sh "find . -name Prueba_Tecnica"
                   sh "mvn clean package"
                 }
         }
