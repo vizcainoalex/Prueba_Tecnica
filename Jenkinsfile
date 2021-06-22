@@ -1,5 +1,8 @@
 pipeline{
     agent any
+    tools {
+    maven 'maven_3_8_1'
+  }
     stages{
         stage('Checkout') {
             steps {
@@ -9,9 +12,7 @@ pipeline{
         }
         
         stage('Compile ..') {
-          
-            def mvn_version = 'maven_3_8_1'
-                withEnv( ["PATH+MAVEN=${tool mvn_version}/bin"] ) {
+           steps {
                   sh "mvn clean package"
                 }
         }
